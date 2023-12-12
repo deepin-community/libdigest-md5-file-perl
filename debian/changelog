@@ -1,5 +1,56 @@
-template-repository (1.0-1) unstable; urgency=medium
+libdigest-md5-file-perl (0.08-1.1) unstable; urgency=medium
 
-  * Initial release
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Holger Levsen <holger@debian.org>  Fri, 01 Jan 2021 16:52:34 +0100
+
+libdigest-md5-file-perl (0.08-1) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Switch to "3.0 (quilt)" source format.
+  * Use debhelper 8 and tiny debian/rules file.
+  * debian/copyright: update to Copyright-Format 1.0.
+  * Bump Standards-Version to 3.9.3; drop version from perl build
+    dependency.
+  * Add a lintian override; "my" is not using-first-person in perl code.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 07 Apr 2012 15:31:41 +0200
+
+libdigest-md5-file-perl (0.07-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: extended regexp for matching upstream releases.
+  * Set Standards-Version to 3.8.0 (no changes).
+  * Add /me to Uploaders.
+  * debian/control: indent example to avoid wrapping.
+  * Refresh debian/rules, no functional changes.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 26 Jul 2008 17:26:50 +0200
+
+libdigest-md5-file-perl (0.06-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+
+  [ Niko Tyni ]
+  * New upstream release.
+  * Switch to distribution-based URLs in debian/copyright and debian/watch.
+  * Minor improvements and cleanups to debian/rules.
+
+ -- Niko Tyni <ntyni@iki.fi>  Wed, 28 Nov 2007 21:35:02 +0200
+
+libdigest-md5-file-perl (0.05-1) unstable; urgency=low
+
+  * Initial Release (Closes: #438834 -- ITP)
+
+ -- Damyan Ivanov <dmn@debian.org>  Mon, 20 Aug 2007 10:24:19 +0300

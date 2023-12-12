@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: libdigest-md5-file-perl
+Section: perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl, libwww-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>, Niko Tyni <ntyni@iki.fi>,
+ gregor herrmann <gregoa@debian.org>
+Standards-Version: 3.9.3
+Homepage: http://search.cpan.org/dist/Digest-MD5-File/
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libdigest-md5-file-perl.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libdigest-md5-file-perl.git
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libdigest-md5-file-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libwww-perl
+Description: Perl extension for getting MD5 sums for files and urls
+ Digest::MD5::File adds functionality for easy calculation of MD5 checksums of
+ entire files, directories or URLs to the standard Digest::MD5 module.
+ .
+ Example usage:
+ .
+   use Digest::MD5::File;
+   my $md5 = Digest::MD5->new;
+   $md5->addpath('/path/to/file.txt');
+   $md5->addpath(\@files);
+   $md5->adddir('/home/tmbg/');
+   $md5->addurl('http://www.tmbg.com/tour.html');
+   my $digest = file_md5_hex($file);
+   my $dir_hashref = dir_md5_hex($dir);
+   my $digest = url_md5_hex($url);
